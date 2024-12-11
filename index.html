@@ -16,7 +16,23 @@
             flex-direction: column;
             min-height: 100vh;
         }
+           /* Position the logo */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 
+.logo {
+    height: 50px; /* Adjust size */
+    width: auto;  /* Maintain aspect ratio */
+}
+
+/* Ensure navigation and content don't overlap with logo */
+header {
+    position: relative;
+    padding-top: 70px; /* Add space for the logo */
+}
         header {
             background-color: #333;
             color: white;
@@ -187,6 +203,11 @@
 
 <body>
     <header>
+        <!--logo-->
+        <div class="logo-container">
+            <img scr="IMG_20241211_130024.jpg" class="logo">
+        </div>
+            img
         <!-- Menu (on the left) -->
         <div class="menu" onclick="toggleDropdown()">
             Menu
