@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unwritten Rules</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('IMG_20241211_232936.jpg');
+            background-image: url('IMG_20241211_130024.jpg');
             color: #333;
             display: flex;
             flex-direction: column;
@@ -59,9 +60,14 @@
             background-color: #333;
             padding: 10px 20px;
             border-radius: 5px;
-            margin-left: 20px;
+            margin-left: 30px;
             cursor: pointer;
             position: relative;
+        }
+
+        .menu i {
+            font-size: 1.5em;
+            color: #f39c12;
         }
 
         .dropdown {
@@ -105,19 +111,16 @@
         nav ul li a {
             color: #f39c12;
             text-decoration: none;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            background-color: #333;
-            border-radius: 5px;
+            font-size: 1.5em;
             text-align: center;
             display: inline-block;
         }
 
         nav ul li a:hover {
-            background-color: #f39c12;
             color: white;
         }
 
+        /* Sections */
         section.intro {
             background: #f9f9f9;
             padding: 40px 20px;
@@ -175,6 +178,7 @@
             background-color: #333;
             color: white;
             padding: 20px 10px;
+            position: relative;
         }
 
         footer h3 {
@@ -201,28 +205,28 @@
             cursor: pointer;
         }
 
-        /* Logo in the footer */
-        .footer-logo-container {
-            margin-top: 20px;
-        }
-
-        .footer-logo {
-            height: 50px;
-            width: auto;
-        }
-
         /* Social Media Icons */
-        .social-media-icons {
-            margin-top: 20px;
-        }
-
-        .social-media-icons a {
+        .social-icons a {
             margin: 0 10px;
-            display: inline-block;
+            font-size: 1.5em;
         }
 
-        .social-media-icons img {
-            height: 30px;
+        .social-icons .fab.fa-youtube {
+            color: red;
+        }
+
+        .social-icons .fab.fa-x {
+            color: black;
+        }
+
+        .social-icons a:hover {
+            color: white;
+        }
+
+        /* Bottom logo in the same row as social icons */
+        .social-icons .bottom-logo {
+            margin-left: 10px;
+            height: 50px;
             width: auto;
         }
     </style>
@@ -230,25 +234,25 @@
 
 <body>
     <header>
-        <!--logo-->
+        <!-- Logo -->
         <div class="logo-container">
             <img src="IMG_20241211_130024.jpg" class="logo" alt="Logo">
         </div>
 
-        <!-- Menu (on the left) -->
+        <!-- Menu (on the left) with icon -->
         <div class="menu" onclick="toggleDropdown()">
-            Menu
+            <i class="fas fa-bars"></i>
             <div class="dropdown">
                 <a href="quiz.html">Quiz</a>
                 <a href="help.html">Help</a>
             </div>
         </div>
 
-        <!-- Navigation Links (centered) -->
+        <!-- Navigation Links (centered) with icons -->
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tips">Tips</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#tips"><i class="fas fa-lightbulb"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -265,28 +269,23 @@
         <h2>Relationship Tips</h2>
         <div class="tip-section">
             <h3><a href="signs-shes-the-one.html">Signs She's the One</a></h3>
-            <p class="sign"><b>1. You don't need to try too hard for the love to work.</b><br>
-                Love just... works, like Wi-Fi that actually connects on the first try.</p>
+            <p class="sign"><b>1. You don't need to try too hard for the love to work.</b><br> Love just... works, like Wi-Fi that actually connects on the first try.</p>
         </div>
         <div class="tip-section">
             <h3><a href="how-to-move-on.html">How to Move On</a></h3>
-            <p class="sign"><b>2. Take it one day at a time.</b><br>
-                Moving on requires patience. Allow yourself to grieve and heal without rushing into another relationship.</p>
+            <p class="sign"><b>2. Take it one day at a time.</b><br> Moving on requires patience. Allow yourself to grieve and heal without rushing into another relationship.</p>
         </div>
         <div class="tip-section">
             <h3><a href="get-your-ex-back.html">How to Get Your Ex-Girlfriend Back</a></h3>
-            <p class="sign"><b>3. Give her space, then communicate honestly.</b><br>
-                Respect her decision to have space and, once the time is right, reach out to discuss what went wrong and how things can improve.</p>
+            <p class="sign"><b>3. Give her space, then communicate honestly.</b><br> Respect her decision to have space and, once the time is right, reach out to discuss what went wrong and how things can improve.</p>
         </div>
         <div class="tip-section">
             <h3><a href="how-to-communicate-better.html">How to Communicate Better</a></h3>
-            <p class="sign"><b>4. Practice active listening.</b><br>
-                Good communication isn't just about talking. It's also about understanding your partner's feelings and expressing empathy.</p>
+            <p class="sign"><b>4. Practice active listening.</b><br> Good communication isn't just about talking. It's also about understanding your partner's feelings and expressing empathy.</p>
         </div>
         <div class="tip-section">
             <h3><a href="how-to-build-trust.html">How to Build Trust</a></h3>
-            <p class="sign"><b>5. Be consistent and reliable.</b><br>
-                Trust grows when both partners show up for each other consistently and with integrity, especially during tough times.</p>
+            <p class="sign"><b>5. Be consistent and reliable.</b><br> Trust grows when both partners show up for each other consistently and with integrity, especially during tough times.</p>
         </div>
     </section>
 
@@ -301,23 +300,15 @@
             <p>Feel free to reach out to us!</p>
             <p>Email: <a href="mailto:contact@unwrittenrules.com">contact@unwrittenrules.com</a></p>
         </div>
+
+        <!-- Social Media Links -->
+        <div class="social-icons">
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com" target="_blank"><i class="fab fa-x"></i></a>
+            <img src="IMG_20241211_130024.jpg" class="bottom-logo" alt="Logo"> <!-- Logo next to social icons -->
+        </div>
+
         <p>&copy; 2024 Unwritten Rules. All rights reserved.</p>
-
-        <!-- Logo in footer -->
-        <div class="footer-logo-container">
-            <img src="IMG_20241211_130024.jpg" class="footer-logo" alt="Logo">
-        </div>
-
-        <!-- Social Media Icons -->
-        <div class="social-media-icons">
-            <a href="https://www.youtube.com" target="_blank">
-                <img src="youtube-logo-placeholder.png" alt="YouTube">
-            </a>
-            <a href="https://www.x.com" target="_blank">
-                <img src="x-logo-placeholder.png" alt="X">
-            </a>
-        </div>
-
         <div class="back-to-top">
             <a href="#top">Back to Top</a>
         </div>
@@ -327,7 +318,7 @@
         let lastScrollTop = 0;
         const header = document.querySelector('header');
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
             if (currentScroll > lastScrollTop) {
@@ -343,11 +334,11 @@
         function toggleDropdown() {
             const dropdown = document.querySelector('.dropdown');
             const isVisible = dropdown.style.display === 'block';
-            
+
             // Toggle the visibility of the dropdown
             dropdown.style.display = isVisible ? 'none' : 'block';
         }
     </script>
 </body>
 
-    </html>
+                </html>
